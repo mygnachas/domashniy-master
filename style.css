@@ -1,0 +1,233 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	color: #000;
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	min-height:100%;
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+	color: #e6618c;
+	text-decoration: underline;
+}
+a:hover {
+	color: #fdf208;
+	text-decoration:none;
+}
+a:focus, a:active {
+	color: #c83867;
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* --------------- /базовые настройки ---------*/
+header{
+    color: #c6c7d4;
+    background-color: #c6c7d4; 
+    background-size: cover;
+    padding: 10px 10px 10px 10px;
+}
+header>h1{
+    font-size: 1.5em; 
+    font-family:'Oxygen', Arial, Helvetica, sans-serif ; 
+    font-style: italic; 
+    font-weight: 600; 
+    color:darkred ;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+headr>hr{
+    color: #a7a8b4;
+    background-color:#a7a8b4 ;
+    border:1px ;
+    height:1px;
+}
+header>.big{
+	font-size: 2.5em; 
+    font-family:'Oxygen', Arial, Helvetica, sans-serif ; 
+    font-style: italic; 
+    font-weight: 600; 
+    color:darkred ;
+    margin-bottom: 25px;
+    margin-top: 25px;
+	text-align: center;
+}
+
+table {
+    background: maroon;
+    color:white;
+    border: 1px double black;
+    width: 50%;
+    cellpadding: 1px;
+}
+    th {
+    font-size: 1.2em;    
+    text-align: center;
+    background: #ccc;
+    padding: 5px;
+    border: 1px solid black;
+}
+    td {
+    font-size: 1.0em;
+    background: rgb(33, 31, 30);
+    border: 1px solid white;
+    padding: 5px 5px 5px 5px;    
+} 
+footer {
+    background-color:rgba(68, 199, 230, 0.45);
+	padding: 5px 5px 5px 5px;
+	margin-bottom: 25px;
+}
+
+
+
+button { 
+    background: -moz-linear-gradient(#D0ECF4, #5BC9E1, #D0ECF4);
+    background: -webkit-gradient(linear, 0 0, 0  100%, from(#D0ECF4), to(#D0ECF4), color-stop(0.5, #5BC9E1));
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00BBD6', endColorstr='#EBFFFF');
+   padding: 3px 7px;
+   color: #333;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+   border: 1px solid #666;
+   padding: 10px 10px 10px 10px 10px;
+    font-size: 1.0em;
+    font-weight: 600;
+    height:30px; 
+    width:200px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+h2{
+    font-size:2em ;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-style:normal; 
+    font-weight: 600;
+    color: firebrick
+}
+h4{
+    font-size:1.2em ;
+    text-align: left;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    color: red;
+}
+p{
+  font-size:1.0em ;
+    text-align: center;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    color: black;  
+}
+.imgleft{
+    float: left;
+    margin:40px 0px  195px 0px;
+    max-width: 300px;
+    max-height: 550px;
+}
+.imgright{
+    float: right;
+    margin:40px 0px 195px 0px;
+    max-width: 300px;
+    max-height: 550px; 
+}
+.small{
+    font-size:0.5em ;
+    color: black;
+    text-align: left;
+    margin-bottom: 1px;
+    margin-top: 1px;
+}
+
+    
+@media screen and (max-width:1350px) {
+    .imgleft , .imgright {width: 250px;
+}
+   @media screen and (max-width:1140px) {
+    .imgleft , .imgright {width: 150px;
+}
+       @media screen and (max-width:1140px) {
+    .imgleft , .imgright {height: 225px;
+}   
+       @media screen and (max-width:840px) {
+    .imgleft , .imgright {
+        width: 150px;
+        display: block;
+}
+        @media screen and (max-width:460) {
+    h2 { font-size: 1.0em ;  
+}       

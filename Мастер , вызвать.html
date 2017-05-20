@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<meta name="google-site-verification" content="f0_PPe4rsC1GoO1BuYMjISbtfYEApDlpSsjXYzfHtUU">
+<meta name="yandex-verification" content="b2dbeedf3d85a682">
+<meta name="wmail-verification" content="dde24cef8950328e947e3895c1351066">
+    <title>домашний мастер</title>
+    <link rel="stylesheet" type="text/css" href="contactform.css">
+</head>
+<body>
+<div id="w">
+<h1>Написать письмо!</h1>
+
+<form action="https://postmail.invotes.com/send"
+    method="post" id="email_form">
+  
+    
+    <p class="note"><span class="req">*</span> Поля со звездочкой обязательны для заполнения</p>
+
+    <div class="row">
+        <label for="name">Ваше Имя <span class="req">*</span></label>
+        <input type="text" name="extra_name" id="name" class="txt" placeholder="Иван Иванов" required />
+    </div>
+
+    <div class="row">
+        <label for="email">E-mail Адрес <span class="req">*</span></label>
+        <input type="email" name="reply_to" id="email" class="txt" placeholder="address@mail.ru" required />
+    </div>
+    
+    <div class="row">
+        <label for="phone">Телефонный номер<span class="req">*</span></label>
+        <input type="text" name="extra_phone" id="phone" class="txt" placeholder="8 XXX XXX XX XX"required/>
+    </div>
+
+    
+    <div class="row">
+        <label for="subject">Тема <span class="req">*</span></label>
+        <input type="text" name="subject" id="subject" class="txt"  placeholder="Тема письма" required />
+    </div>
+
+    <div class="row">
+        <label for="text">Сообщение <span class="req">*</span></label>
+        <textarea name="text" class="txtarea" id="text" required></textarea>
+    </div>
+     
+    <input type="hidden" name="access_token" value="so93a74z0nfmwbekxj0n3enx" required/>
+   <input type="hidden" name="success_url" value="/?message=Email+Successfully+Sent%21&isError=0" required />
+    <input type="hidden" name="error_url" value="/?message=Email+could+not+be+sent.&isError=1" required />
+    
+    <div class="center">
+        <input type="submit" id="submit_form" tabindex="5" value="Отправить Сообщение">
+    </div>
+    <p>Powered by <a href="https://postmail.invotes.com" target="_blank">PostMail</a></p>
+</form>
+
+<p class="note"> Нажимая кнопку  (Отправить Сообщение) , я даю своё согласие на обработку</p>
+<p class="note">моих персональных данных, в соответствии с Федерасьным законом</p>
+<p class="note">от<a href="http://www.consultant.ru/cons/cgi/online.cgi?req=doc&base=LAW&n=213190&fld=134&dst=1000000001,0&rnd=0.6385533442862619#0" target="_blank"> 27.07.2006 года №152-Ф3</a> (О персональных данных)</p>
+
+<center>
+    <button><A HREF="index.html">Главная</A></button> <button><A HREF="Стоимость,расценки.html">Стоимость услуг</A></button>
+</center>
+
+<script>
+    var submitButton = document.getElementById("submit_form");
+    var form = document.getElementById("email_form");
+    form.addEventListener("submit", function (e) {
+        setTimeout(function() {
+            submitButton.value = "Sending...";
+            submitButton.disabled = true;
+        }, 1);
+    });
+</script> 
+</body>
+</html>
